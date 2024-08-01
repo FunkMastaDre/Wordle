@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmvt384twctn"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_1m5w0"]
+[ext_resource type="PackedScene" uid="uid://cppr86biclpn3" path="res://Scenes/keyboard.tscn" id="2_st8t6"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1m5w0")
+
+[node name="Keyboard" parent="." instance=ExtResource("2_st8t6")]
+layout_mode = 1
+offset_left = 392.0
+offset_top = 480.0
+offset_right = -368.0
+offset_bottom = -8.0

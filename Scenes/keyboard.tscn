@@ -1,0 +1,216 @@
+[gd_scene load_steps=2 format=3 uid="uid://cppr86biclpn3"]
+
+[ext_resource type="PackedScene" uid="uid://mcbki88wtnrv" path="res://Scenes/Keyboard_button.tscn" id="1_t2vo2"]
+
+[node name="Keyboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -760.0
+offset_bottom = -488.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Q" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+text = "Q"
+
+[node name="W" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 72.0
+text = "W"
+
+[node name="E" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 112.0
+text = "E"
+
+[node name="R" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 152.0
+text = "R"
+
+[node name="T" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 160.0
+offset_right = 192.0
+text = "T"
+
+[node name="Y" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 232.0
+text = "Y"
+
+[node name="U" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 272.0
+text = "U"
+
+[node name="I" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 312.0
+text = "I"
+
+[node name="O" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 352.0
+text = "O"
+
+[node name="P" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 392.0
+text = "P"
+
+[node name="A" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 56.0
+offset_right = 56.0
+offset_bottom = 104.0
+text = "A"
+
+[node name="S" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 56.0
+offset_right = 95.0
+offset_bottom = 104.0
+text = "S"
+
+[node name="D" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 56.0
+offset_right = 135.0
+offset_bottom = 104.0
+text = "D"
+
+[node name="F" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 56.0
+offset_right = 175.0
+offset_bottom = 104.0
+text = "F"
+
+[node name="G" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 56.0
+offset_right = 215.0
+offset_bottom = 104.0
+text = "G"
+
+[node name="H" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 56.0
+offset_right = 255.0
+offset_bottom = 104.0
+text = "H"
+
+[node name="J" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 56.0
+offset_right = 295.0
+offset_bottom = 104.0
+text = "J"
+
+[node name="K" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 56.0
+offset_right = 335.0
+offset_bottom = 104.0
+text = "K"
+
+[node name="L" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 56.0
+offset_right = 375.0
+offset_bottom = 104.0
+text = "L"
+
+[node name="Z" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 112.0
+offset_right = 87.0
+offset_bottom = 160.0
+text = "Z"
+
+[node name="X" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 112.0
+offset_right = 127.0
+offset_bottom = 160.0
+text = "X"
+
+[node name="C" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 112.0
+offset_right = 167.0
+offset_bottom = 160.0
+text = "C"
+
+[node name="V" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 112.0
+offset_right = 207.0
+offset_bottom = 160.0
+text = "V"
+
+[node name="B" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 112.0
+offset_right = 247.0
+offset_bottom = 160.0
+text = "B"
+
+[node name="N" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 112.0
+offset_right = 287.0
+offset_bottom = 160.0
+text = "N"
+
+[node name="M" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 112.0
+offset_right = 327.0
+offset_bottom = 160.0
+text = "M"
+
+[node name="Delete" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 112.0
+offset_right = 392.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 16
+text = "Delete"
+
+[node name="Enter" parent="." instance=ExtResource("1_t2vo2")]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 48.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 16
+text = "Enter"

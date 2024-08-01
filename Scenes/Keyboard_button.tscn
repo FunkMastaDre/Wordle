@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://mcbki88wtnrv"]
+
+[ext_resource type="Script" path="res://Scripts/Keyboard_button.gd" id="1_6rex6"]
+
+[sub_resource type="FontFile" id="FontFile_b1ubu"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/18/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/18/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_7b0xn"]
+default_font = SubResource("FontFile_b1ubu")
+default_font_size = 24
+
+[node name="Keyboard_button" type="Button"]
+offset_right = 32.0
+offset_bottom = 48.0
+theme = SubResource("Theme_7b0xn")
+script = ExtResource("1_6rex6")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
