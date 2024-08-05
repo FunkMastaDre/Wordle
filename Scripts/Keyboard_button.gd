@@ -1,14 +1,7 @@
 extends Button
 
-signal keyboard_button(button)
-
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-
+signal keyboard_button(button_text)
 
 func _on_pressed() -> void:
-	keyboard_button.emit(text)
+	keyboard_button.emit(self.text)
 
