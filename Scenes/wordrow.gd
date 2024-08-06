@@ -1,15 +1,14 @@
 extends Control
 
-@onready var Box0 = $Box0/Label
-@onready var Box1 = $Box1/Label
-@onready var Box2 = $Box2/Label
-@onready var Box3 = $Box3/Label
-@onready var Box4 = $Box4/Label
-@onready var boxes : Array = [Box0, Box1, Box2, Box3, Box4]
+signal next_row(word)
+signal header_update(header)
+
+@onready var boxes : Array = [$Box0/Label, $Box1/Label, $Box2/Label, $Box3/Label, $Box4/Label]
 
 @export var keyboard: Control
 @export var main: Control
 
+var active = false
 var current_box : int = 0
 
 
@@ -18,21 +17,23 @@ func _ready():
 		child.keyboard_button.connect(keyboard_input)
 
 func keyboard_input(button):
-	if button not in ["Delete", "Enter"] and Box4.text == "":
-		boxes[current_box].text = button
-		current_box += 1
-	
-	if button == "Delete":
-		boxes[current_box - 1].text = ""
-		current_box -= 1
-		if current_box < 0:
-			current_box = 0
-	
-	if button == "Enter":
-		if Box4.text == "":
-			print("Not enough Letters")
-		else:
-			check_word()
+	if active:
+		if button not in ["Delete", "Enter"] and boxes[-1].text == "":
+			boxes[current_box].text = button
+			current_box += 1
+		
+		if button == "Delete":
+			boxes[current_box - 1].text = ""
+			current_box -= 1
+			if current_box < 0:
+				current_box = 0
+		
+		if button == "Enter":
+			if boxes[-1].text == "":
+				header_update.emit("Not Enough Letters")
+				print("Not enough Letters")
+			else:
+				check_word()
 
 func check_word():
 	var solution = main.word
@@ -42,15 +43,19 @@ func check_word():
 		word += box.text.to_lower()
 	if word not in word_list:
 		print("word does not exist")
+		header_update.emit("Not in word list")
 	else:
 		for i in range(5):
 			reveal(boxes[i].text.to_lower(), solution[i], boxes[i], solution)
+		active = false
+		next_row.emit(word)
 
 func reveal(attempt_letter, solution_letter, box, solution):
-	var yellow = Color(.75,.75,.0,1)
-	var green = Color(0,.80,0,1)
-	var gray = Color(.30, .30, .30, 1)
+	var yellow = Color(0.75, 0.75, .0, 1)
+	var green = Color(0, 0.80, 0, 1)
+	var gray = Color(0.30, 0.30, 0.30, 1)
 	var this_box = box.get_parent()
+	var border = this_box.get_child(1)
 	if attempt_letter != solution_letter:
 		if attempt_letter in solution:
 			# Yellow
@@ -61,3 +66,5 @@ func reveal(attempt_letter, solution_letter, box, solution):
 	else:
 		# Green
 		this_box.color = green
+	border.hide()
+	

@@ -148,6 +148,7 @@ offset_left = 55.0
 offset_top = 112.0
 offset_right = 87.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../Enter")
 text = "Z"
 
 [node name="X" parent="." instance=ExtResource("1_t2vo2")]
@@ -156,6 +157,7 @@ offset_left = 95.0
 offset_top = 112.0
 offset_right = 127.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../Z")
 text = "X"
 
 [node name="C" parent="." instance=ExtResource("1_t2vo2")]
@@ -164,6 +166,7 @@ offset_left = 135.0
 offset_top = 112.0
 offset_right = 167.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../X")
 text = "C"
 
 [node name="V" parent="." instance=ExtResource("1_t2vo2")]
@@ -172,6 +175,7 @@ offset_left = 175.0
 offset_top = 112.0
 offset_right = 207.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../C")
 text = "V"
 
 [node name="B" parent="." instance=ExtResource("1_t2vo2")]
@@ -180,6 +184,7 @@ offset_left = 215.0
 offset_top = 112.0
 offset_right = 247.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../V")
 text = "B"
 
 [node name="N" parent="." instance=ExtResource("1_t2vo2")]
@@ -188,6 +193,7 @@ offset_left = 255.0
 offset_top = 112.0
 offset_right = 287.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../B")
 text = "N"
 
 [node name="M" parent="." instance=ExtResource("1_t2vo2")]
@@ -196,6 +202,7 @@ offset_left = 295.0
 offset_top = 112.0
 offset_right = 327.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../N")
 text = "M"
 
 [node name="Delete" parent="." instance=ExtResource("1_t2vo2")]
@@ -204,6 +211,7 @@ offset_left = 336.0
 offset_top = 112.0
 offset_right = 392.0
 offset_bottom = 160.0
+focus_neighbor_left = NodePath("../M")
 theme_override_font_sizes/font_size = 16
 text = "Delete"
 

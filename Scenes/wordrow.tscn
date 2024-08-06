@@ -9,11 +9,10 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Wordrow" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 script = ExtResource("1_cb3ap")
 
 [node name="Box0" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 50.0
 offset_bottom = 50.0
 scale = Vector2(0.961241, 0.961241)
@@ -28,7 +27,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Border" type="ColorRect" parent="Box0"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 51.0
+
 [node name="Box1" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_right = 106.0
 offset_bottom = 50.0
@@ -44,7 +52,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Border" type="ColorRect" parent="Box1"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 51.0
+
 [node name="Box2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 112.0
 offset_right = 162.0
 offset_bottom = 50.0
@@ -60,7 +77,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Border" type="ColorRect" parent="Box2"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 51.0
+
 [node name="Box3" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 168.0
 offset_right = 218.0
 offset_bottom = 50.0
@@ -76,7 +102,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Border" type="ColorRect" parent="Box3"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 51.0
+
 [node name="Box4" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 224.0
 offset_right = 274.0
 offset_bottom = 50.0
@@ -91,3 +126,11 @@ label_settings = SubResource("LabelSettings_oqyss")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Border" type="ColorRect" parent="Box4"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 51.0
