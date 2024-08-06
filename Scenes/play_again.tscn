@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cix066mi2y8sm"]
+[gd_scene load_steps=3 format=3 uid="uid://cix066mi2y8sm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljt8e"]
 bg_color = Color(6.37732e-07, 0.389467, 0.190889, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67py6"]
 
 [node name="Play_again" type="Button"]
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_ljt8e")
 text = "Play again?"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(43, 11)
+scale = Vector2(-4.40714, -1.20224)
+shape = SubResource("RectangleShape2D_67py6")
