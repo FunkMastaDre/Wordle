@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_1m5w0"]
 [ext_resource type="PackedScene" uid="uid://cppr86biclpn3" path="res://Scenes/keyboard.tscn" id="2_st8t6"]
 [ext_resource type="PackedScene" uid="uid://c47ftbuj23tx5" path="res://Scenes/wordrow.tscn" id="3_soues"]
-[ext_resource type="PackedScene" uid="uid://cix066mi2y8sm" path="res://play_again.tscn" id="4_y33iv"]
+[ext_resource type="PackedScene" uid="uid://cix066mi2y8sm" path="res://Scenes/play_again.tscn" id="4_y33iv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mu3os"]
 font_size = 20
@@ -47,6 +47,9 @@ offset_bottom = 88.0
 label_settings = SubResource("LabelSettings_boxx7")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Header cooldown" type="Timer" parent="Header"]
+wait_time = 2.0
 
 [node name="Keyboard" parent="." instance=ExtResource("2_st8t6")]
 layout_mode = 1
@@ -104,4 +107,5 @@ offset_top = 424.0
 offset_right = 651.0
 offset_bottom = 472.0
 
+[connection signal="timeout" from="Header/Header cooldown" to="." method="_on_header_cooldown_timeout"]
 [connection signal="pressed" from="Play_again" to="." method="_on_play_again_pressed"]

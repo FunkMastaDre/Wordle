@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c47ftbuj23tx5"]
 
-[ext_resource type="Script" path="res://Scenes/wordrow.gd" id="1_cb3ap"]
+[ext_resource type="Script" path="res://Scripts/wordrow.gd" id="1_cb3ap"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oqyss"]
 font_size = 36

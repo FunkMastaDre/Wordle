@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://mcbki88wtnrv"]
+[gd_scene load_steps=5 format=3 uid="uid://mcbki88wtnrv"]
 
 [ext_resource type="Script" path="res://Scripts/Keyboard_button.gd" id="1_6rex6"]
 
@@ -32,10 +32,26 @@ cache/0/18/0/kerning_overrides/18/0 = Vector2(0, 0)
 default_font = SubResource("FontFile_b1ubu")
 default_font_size = 24
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6ekc"]
+
 [node name="Keyboard_button" type="Button"]
 offset_right = 32.0
 offset_bottom = 48.0
 theme = SubResource("Theme_7b0xn")
 script = ExtResource("1_6rex6")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 48.0
+mouse_filter = 2
+color = Color(0.678944, 0.678944, 0.678944, 0.666667)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(16, 24)
+scale = Vector2(1.63558, 2.423)
+shape = SubResource("RectangleShape2D_j6ekc")
+shape_centered = false
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_pressed"]
