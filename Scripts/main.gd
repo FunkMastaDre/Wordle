@@ -50,7 +50,8 @@ func check_solution(attempt) -> void:
 func change_header(header) -> void:
 	$Header.text = header
 	if header not in win_headers:
-		$"Header/Header cooldown".start()
+		if header != word:
+			$"Header/Header cooldown".start()
 
 
 func _on_play_again_pressed() -> void:
