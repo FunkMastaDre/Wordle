@@ -19,7 +19,7 @@ func _ready() -> void:
 		child.connect_keyboard_color_signal(self)
 
 
-func keyboard_input(button) -> void:
+func keyboard_input(button : String) -> void:
 	if active:
 		if button not in ["Delete", "Enter"] and boxes[-1].text == "":
 			boxes[current_box].text = button

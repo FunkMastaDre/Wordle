@@ -28,13 +28,12 @@ func _ready() -> void:
 	$Keyboard/Q.grab_focus()
 
 
-func check_solution(attempt) -> void:
+func check_solution(attempt : String) -> void:
 	const max_rows = 6
 	if word != attempt:
 		current_row += 1
 		if current_row > max_rows - 1:
 			change_header(word)
-			print("You Lose")
 			$Play_again.show()
 		else:
 			await get_tree().create_timer(0.1).timeout
@@ -43,11 +42,10 @@ func check_solution(attempt) -> void:
 		var header : String = win_headers[current_row]
 		
 		change_header(header)
-		print("You Win!")
 		$Play_again.show()
 
 
-func change_header(header) -> void:
+func change_header(header : String) -> void:
 	$Header.text = header
 	if header not in win_headers:
 		if header != word:

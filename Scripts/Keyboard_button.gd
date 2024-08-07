@@ -18,14 +18,15 @@ func connect_keyboard_color_signal(wordrow):
 func _on_pressed() -> void:
 	keyboard_button.emit(self.text)
 
-func change_color(color, letter) -> void:
+func change_color(color : String, letter : String) -> void:
 	var yellow : Color = Color(0.75, 0.75, .0, 0.50)
 	var green : Color = Color(0, 0.80, 0, 0.50)
 	var gray : Color = Color(0.30, 0.30, 0.30, 0.50)
 	
 	if letter == text.to_lower():
 		if color == "yellow":
-			$ColorRect.color = yellow
+			if $ColorRect.color != green:
+				$ColorRect.color = yellow
 		elif color == "green":
 			$ColorRect.color = green
 		else:
